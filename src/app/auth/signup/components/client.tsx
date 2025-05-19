@@ -5,8 +5,8 @@
  */
 
 import { RegisterFormUI } from './form'
-import { useSignUpPresenter } from '../presenters'
-import { submitSignUpForm } from '../adapters'
+import { useSignUpPresenter } from '../useSignUpPresenter'
+import { submitSignUpForm } from '../submitSignUpAdapter'
 
 export default function RegisterClient() {
 	const {register, errors, isSubmitting, onSubmit} = useSignUpPresenter(

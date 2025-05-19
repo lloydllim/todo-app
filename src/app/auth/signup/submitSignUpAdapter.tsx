@@ -1,4 +1,4 @@
-import {signUpAction} from '../action'
+import {signUpAction} from './action'
 import {SignUpInput} from '@/core/lib/validators/userSchema'
 
 /**
