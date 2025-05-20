@@ -1,8 +1,8 @@
 'use server'
 
-import {SignInSchema} from '@/core/lib/validators/userSchema'
-import {getRepository} from '@/core/repositories/repositoryRegistry'
-import {signInUser} from '@/features/auth/use-cases/signInUser'
+import { SignInSchema } from '@/core/lib/validators/userSchema'
+import { getRepository } from '@/core/repositories/repositoryRegistry'
+import { signInUser } from '@/features/auth/use-cases/signInUser'
 
 type SignInProps = {
 	email: string
