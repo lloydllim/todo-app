@@ -1,7 +1,7 @@
 'use client'
 
 import type {FieldErrors} from 'react-hook-form'
-import type {SignUpInput} from '@/core/lib/validators/userSchema'
+import type {SignInInput} from '@/core/lib/validators/userSchema'
 import {FormInput} from '@/components/forms/FormInput'
 
 /**
@@ -11,24 +11,19 @@ import {FormInput} from '@/components/forms/FormInput'
 
 type Props = {
 	onSubmit: (values: any) => void
-	errors: FieldErrors<SignUpInput>
+	errors: FieldErrors<SignInInput>
 	isSubmitting: boolean
 	register: any
 }
 
-export function RegisterFormUI({
-	onSubmit,
-	errors,
-	isSubmitting,
-	register,
-}: Props) {
+export function LoginFormUI({onSubmit, errors, isSubmitting, register}: Props) {
 	return (
 		<form
 			onSubmit={onSubmit}
 			className='w-full max-w-md mx-auto mt-10 bg-white p-8 rounded-2xl shadow-lg space-y-6'
 		>
 			<h2 className='text-2xl font-bold text-center text-gray-800'>
-				Create an Account
+				Login to your Account
 			</h2>
 
 			<FormInput
@@ -38,14 +33,6 @@ export function RegisterFormUI({
 				placeholder='you@example.com'
 				registration={register('email')}
 				error={errors.email}
-			/>
-
-			<FormInput
-				id='username'
-				label='Username'
-				placeholder='yourusername'
-				registration={register('username')}
-				error={errors.username}
 			/>
 
 			<FormInput
@@ -68,17 +55,17 @@ export function RegisterFormUI({
 							: 'bg-blue-600 hover:bg-blue-700'
 					}`}
 				>
-					{isSubmitting ? 'Signing Up...' : 'Sign Up'}
+					{isSubmitting ? 'Signing In...' : 'Sign In'}
 				</button>
 			</div>
 
 			<p className='text-center text-sm text-gray-500'>
-				Already have an account?{' '}
+				Don't have an account yet?{' '}
 				<a
-					href='/auth/signin'
+					href='/auth/signup'
 					className='text-blue-600 hover:underline'
 				>
-					Sign in
+					Sign up
 				</a>
 			</p>
 		</form>

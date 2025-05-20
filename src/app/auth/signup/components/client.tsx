@@ -9,7 +9,7 @@ import { useSignUpPresenter } from '../useSignUpPresenter'
 import { submitSignUpForm } from '../submitSignUpAdapter'
 
 export default function RegisterClient() {
-	const {register, errors, isSubmitting, onSubmit} = useSignUpPresenter(
+	const { register, errors, isSubmitting, onSubmit } = useSignUpPresenter(
 		async (data) => {
 			try {
 				await submitSignUpForm(data)
