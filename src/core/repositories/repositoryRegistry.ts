@@ -1,4 +1,4 @@
-type RepoSource = 'prisma' | 'mock'
+type RepoSource = 'prisma' | 'mock' // this can have multiple data sources
 
 const registry = {
 	prisma: {

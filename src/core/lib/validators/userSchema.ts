@@ -32,4 +32,5 @@ export const EditProfileSchema = z.object({
 	email: z.string().email('Invalid email address').optional(),
 	username: z.string().min(6, 'Username must be at least 6 characters').optional(),
 })
+
 export type EditProfileInput = z.infer<typeof EditProfileSchema>
